@@ -1,0 +1,109 @@
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.carrossel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.informacoes {
+    display: none;
+}
+
+.informacoes.ativa {
+    display: block;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100vh;
+}
+
+.informacoes h1 {
+    font-size: 60px;
+    color: #ffffff;
+    margin-bottom: 80px;
+    font-family: "NotoSerif";
+    letter-spacing: 6px;
+    text-align: center; /* Centraliza o texto */
+    text-shadow: 5px 5px 10px rgba(87, 87, 87, 0.9);
+    box-shadow: 0 0 10px #ffffff;
+    padding: 10px;
+}
+
+
+.informacoes .descricao {
+    width: 50%;
+    font-size: 25px;
+    color: #ffffff;
+    line-height: 40px;
+    height: 300px;
+    overflow: auto;
+    padding-right: 15px;
+}
+
+
+.botoes {
+    display: flex;            /* Organiza os elementos filhos (botões) em linha por padrão. */
+    justify-content: center;  /* Centraliza os botões horizontalmente no contêiner. */
+    align-items: center;      /* Centraliza os botões verticalmente no contêiner.  */
+    gap: 15px;                /* Adiciona um espaçamento de 15px entre os botões. */
+}
+
+.botoes .botao {
+    border: none;               /* Remove as bordas padrão do botão. */
+    background: #ffffff;      /* Define a cor de fundo como branco. */
+    width: 30px;                /* Define a largura do botão em 30px. */
+    height: 30px;               /* Define a altura do botão em 30px. */
+    cursor: pointer;            /* Altera o cursor para uma "mãozinha" ao passar sobre o botão, indicando que é clicável. */
+    border-radius: 50%;         /* Torna o botão circular. */
+}
+
+.botoes .botao {
+    transform: scale(1.0);          /* Define o tamanho padrão do botão (nenhum aumento ou diminuição). */
+    box-shadow: 0 0 10px #d9d9d9; /* Adiciona uma sombra suave ao redor do botão, simulando um efeito de elevação. */
+}
+
+
+.imagem{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+}
+
+.imagem.ativa{
+    display: block;
+    animation: mudarImagem 0.7s;
+}
+
+
+@keyframes mudarImagem {
+    from{
+        opacity: 0.85;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+main:after{
+    content: "";
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
+    z-index: -1;
+}
