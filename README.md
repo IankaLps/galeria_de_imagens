@@ -1,5 +1,5 @@
 # Galeria Interativa de Imagens
-
+![Media preview](https://github.com/user-attachments/assets/009b2477-cf8c-4bf3-a6b3-06b95c56fb13)
 Este é um projeto de uma galeria interativa de imagens com efeito de desfoque nos cantos, utilizando HTML, CSS e JavaScript. A galeria permite a visualização de imagens em um carrossel, com transições suaves e exibição de informações detalhadas sobre cada imagem. O design é responsivo e a interface de navegação é simples e intuitiva.
 
 ## Funcionalidades
